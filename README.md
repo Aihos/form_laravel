@@ -13,8 +13,11 @@ Ce projet utilise **Laravel** pour la gesstion du Backend , **Vite.js** pour la 
 ---
 ## Démarrer
 
-1. Cloner le repo github
+0. Cloner le repo github
 > git clone https://github.com/Aihos/form_laravel
+
+1. Récupérer le .env
+> cp .env.example .env
 
 2. Installer les dépendances
 > cd form_laravel/laravel-breeze-react
