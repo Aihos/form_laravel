@@ -1,40 +1,76 @@
-# Test web Majordhom
+# Laravel Breeze + Vite.js + Docker
 
-## Pré-requis
+Ce projet utilise **Laravel** pour la gesstion du Backend , **Vite.js** pour la compilation front-end, et **Docker** pour le déploiement local avec MySQL et PhpMyAdmin.
 
-git, docker, et un IDE
+---
 
+## ⚙️ Pré-requis
+
+- Docker et Docker Compose
+- Node.js ≥ 16
+- Composer
+
+---
 ## Démarrer
 
-Cloner le repo github
+1. Cloner le repo github
 > git clone https://github.com/Majordhom/test-php.git
 
-Lancer la stack LAMP
+2. Installer les dépendances
+> cd laravel-breeze-react
+> npm install
+> composer install
+
+3. Faire les migrations
+> cd laravel-breeze-react
+> php artisan migration
+
+4. Lancer la stack LAMP
 > docker compose up -d
 
-Apache est ouvert sur le port :80 (http://localhost:80).\
+5. Lancer la stack Laravel (dans un nouveau terminal)
+> cd laravel-breeze-react
+> php artisan serve
+
+6. Lancer la stack ViteJs (dans un nouveau terminal)
+> cd laravel-breeze-react
+> php artisan serve
+
+
+Laravel est ouvert sur le port :8000 (http://localhost:8000).\
 Phpmyadmin est ouvert sur le port :8080 (http://localhost:8080)\
-Mysql est ouvert sur :3306\
+Phpmyadmin est ouvert sur le port :5173 (http://localhost:5173)\
+Mysql est ouvert sur :3307\
 \
 Utilisateur et mdp mysql: `root` et `verysecurepassword`
 
-## Exercice
 
-*Pas de limite de temps, vous pourrez terminer l'exercice chez vous si cela vous semble pertinent.*
 
-![alt text](./maquette.png)
+## Explication du projet
 
-Vous devez intégrer cette maquette au site web de l'agence, enregistrez les données du formulaire dans la base de
-données.
-Nous voulons voir votre façon d'intégrer une maquette de manière *responsive*, comment vous organisez votre code (split des fichiers, commentaires, balises html, écriture des fonctions ...), et
-comment vous
-gérez la sécurité de celui-ci.
 
-Le but n'est pas forcement de terminer la maquette et de tout intégrer, mais de montrer ce que vous savez faire:
-connaissance d'un framework
-(SASS, React, Angular, Typescript, Laravel, Symfony ...) ou autres outils (Google ReCaptcha), design pattern, etc.
+### 🗂️ Structure du projet
 
-Ne vous inquiètez ne vous jugerons pas uniquement sur ce test, vous pourrez aussi nous faire parvenir par exemple le
-code source de vos projets d'études ou projets perso.
+- `app/` : Contient la logique Laravel.
+- `resources/` : Fichiers front-end (Vue, Blade, etc).
+- `routes/` : Définition des routes (web.php, api.php, etc).
+- `config/` : Configuration du projet.
+- `database/` : Migrations, seeders, factories.
+- `public/` : Point d'entrée web (fichiers accessibles publiquement).
+- `storage/` : Logs, cache, etc.
+- `docker-compose.yml` : Configuration des services Docker.
+- `vite.config.ts` : Configuration Vite.js.
+- `components/` : Composants Vue.js.
+- `.env` : Variables d’environnement (non versionnées).
+- `README.md` : Ce fichier.
 
-Bonne chance !
+---
+![alt text]()
+
+Bonjour, voici donc mon rendu pour votre exercice, j'ai voulu le faire via Laravel, Vitejs et Tailwind (via le kit breeze de Laravel), j'ai simplement fais en sorte que le formulaire envoie les données a la BDD et qu'ensuite on puisse voir les voir dans le dashboard. 
+
+En terme de sécurité, j'ai implémenter simplement dans le formulaire HTML des RegEx pour que l'utilisateur se plie au normes. De plus si l'utilisatur arrive a écrire du html ou faire des injections SQL j'ai mis en place dans le FormController des fonction strip_tags() de Laravel pour éviter supprimer les injections avant qu'elles soient envoyés à la BDD.
+
+Au niveau du responsive, le formulaire passe correctement au format mobile ainsi que le Dashboard (même si les messages sont très compactent ;) ).
+
+
