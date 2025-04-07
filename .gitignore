@@ -3,4 +3,3 @@ mysql
 .vscode
 /vendor
 /node_modules
-.env
