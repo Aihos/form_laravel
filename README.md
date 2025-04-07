@@ -73,9 +73,11 @@ Utilisateur et mdp mysql: `root` et `verysecurepassword`
 - `README.md` : Ce fichier.
 
 ---
-Bonjour, voici donc mon rendu pour votre exercice, j'ai voulu le faire via Laravel, Vitejs et Tailwind (via le kit breeze de Laravel), j'ai simplement fais en sorte que le formulaire envoie les données a la BDD et qu'ensuite on puisse voir les voir dans le dashboard. 
+Bonjour, voici donc mon rendu pour votre exercice, j'ai voulu le faire via Laravel, Vitejs et Tailwind (via le kit breeze de Laravel), j'ai simplement fait en sorte que le formulaire envoie les données à la BDD et qu'ensuite, on puisse voir les voir dans le dashboard. 
 
-En terme de sécurité, j'ai implémenter simplement dans le formulaire HTML des RegEx pour que l'utilisateur se plie au normes. De plus si l'utilisatur arrive a écrire du html ou faire des injections SQL j'ai mis en place dans le FormController des fonction strip_tags() de Laravel pour éviter supprimer les injections avant qu'elles soient envoyés à la BDD.
+Le Dashboard est accessible par le button inscription ou connexion, mais je vous conseille de vous créer un compte. Ensuite, vous pouvez voir les messages envoyés depuis le form.
+
+En termes de sécurité, j'ai implémenté simplement dans le formulaire HTML des RegEx pour que l'utilisateur se plie aux normes. De plus, si l'utilisateur arrive à écrire du html ou faire des injections SQL, j'ai mis en place dans le FormController des fonction strip_tags() de Laravel pour éviter de supprimer les injections avant qu'elles ne soient envoyés à la BDD.
 
 Au niveau du responsive, le formulaire passe correctement au format mobile ainsi que le Dashboard (même si les messages sont très compactent ;) ).
 
