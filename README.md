@@ -18,24 +18,24 @@ Ce projet utilise **Laravel** pour la gesstion du Backend , **Vite.js** pour la 
 
 2. Installer les dépendances
 > cd form_laravel/laravel-breeze-react
-> npm install
-> composer install
+ npm install
+ composer install
 
 3. Faire les migrations
 > cd  form_laravel/laravel-breeze-react
-> php artisan migration
+ php artisan migration
 
 4. Lancer la stack LAMP
 >  form_laravel/laravel-breeze-react
-> docker compose up -d
+ docker compose up -d
 
 5. Lancer la stack Laravel (dans un nouveau terminal)
 > cd laravel-breeze-react
-> php artisan serve
+ php artisan serve
 
 6. Lancer la stack ViteJs (dans un nouveau terminal)
 > cd laravel-breeze-react
-> php artisan serve
+ npm run dev
 
 
 Laravel est ouvert sur le port :8000 (http://localhost:8000).\
