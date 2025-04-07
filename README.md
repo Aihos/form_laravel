@@ -14,7 +14,7 @@ Ce projet utilise **Laravel** pour la gesstion du Backend , **Vite.js** pour la 
 ## Démarrer
 
 1. Cloner le repo github
-> git clone https://github.com/Majordhom/test-php.git
+> git clone https://github.com/Aihos/form_laravel
 
 2. Installer les dépendances
 > cd laravel-breeze-react
