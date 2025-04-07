@@ -17,15 +17,16 @@ Ce projet utilise **Laravel** pour la gesstion du Backend , **Vite.js** pour la 
 > git clone https://github.com/Aihos/form_laravel
 
 2. Installer les dépendances
-> cd laravel-breeze-react
+> cd form_laravel/laravel-breeze-react
 > npm install
 > composer install
 
 3. Faire les migrations
-> cd laravel-breeze-react
+> cd  form_laravel/laravel-breeze-react
 > php artisan migration
 
 4. Lancer la stack LAMP
+>  form_laravel/laravel-breeze-react
 > docker compose up -d
 
 5. Lancer la stack Laravel (dans un nouveau terminal)

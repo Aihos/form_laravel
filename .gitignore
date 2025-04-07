@@ -1,3 +1,6 @@
 mysql
 .idea
 .vscode
+/vendor
+/node_modules
+.env
